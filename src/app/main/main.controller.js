@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('ruStudiorationTestwork')
+    .module('testwork')
     .controller('MainController', MainController);
 
   /** @ngInject */
