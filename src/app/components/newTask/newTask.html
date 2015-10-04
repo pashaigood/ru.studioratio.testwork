@@ -1,23 +1,44 @@
-<form>
+<form name="newTask" ng-submit="form.add()" novalidate>
     <h1>Добавить задачу</h1>
-    <div class="form-group">
+    <div class="form-group" ng-class="{'has-error':(isNameValid = (newTask.name.$dirty && newTask.name.$invalid))}">
         <label>Название задачи</label>
-        <input type="text" class="form-control" placeholder="Абра кадабра!">
+        <input type="text"
+               name="name"
+               ng-model="task.title"
+               required=""
+               class="form-control" placeholder="Захват мира!">
+        <p class="help-block has-error" ng-show="isNameValid">
+            Назовите, то чем займётесь!
+        </p>
     </div>
     <div class="form-group">
         <label>Описание</label>
-        <textarea class="form-control" rows="5"></textarea>
-        <p class="help-block">Example block-level help text here.</p>
+        <textarea
+                ng-model="task.desc"
+                placeholder="Вы можете как написать, так и не неписать."
+                class="form-control" rows="5"></textarea>
     </div>
-    <div class="form-group">
-        <label>Дата окончания</label>
-        <input type="date" class="form-control">
-        <p class="help-block">Example block-level help text here.</p>
+    <div class="form-group" ng-class="{'has-error':(isDateValid = (newTask.date.$dirty && newTask.date.$invalid))}">
+        <label>Дата и время окончания</label>
+        <div class="row">
+            <div class="col-xs-6">
+                <input type="date"
+                       name="date"
+                       ng-model="task.date"
+                       required=""
+                       min="task.date"
+                       class="form-control">
+            </div>
+            <div class="col-xs-6">
+                <input type="time"
+                       name="time"
+                       ng-model="task.date"
+                       class="form-control">
+            </div>
+        </div>
+        <p class="help-block" ng-show="isDateValid">
+            Любая задача должна когда-нибудь закончится.
+        </p>
     </div>
-    <div class="form-group">
-        <label>Время окончания</label>
-        <input type="time" class="form-control">
-        <p class="help-block">Example block-level help text here.</p>
-    </div>
-    <button type="submit" class="btn btn-default">Добавить</button>
+    <button ng-disabled="newTask.$invalid" type="submit" class="btn btn-default ">Добавить</button>
 </form>

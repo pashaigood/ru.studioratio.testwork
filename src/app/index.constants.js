@@ -3,6 +3,6 @@
 
   angular
     .module('testwork')
-    .constant('empty', 0);
+    .constant('addingMinutes', 10);
 
 })();

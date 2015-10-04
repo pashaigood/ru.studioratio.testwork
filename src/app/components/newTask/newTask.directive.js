@@ -18,14 +18,28 @@
         return directive;
 
         /** @ngInject */
-        function NewTaskController($scope) {
+        function NewTaskController($scope, $log, taskFactory, tasksService) {
             var form = this;
+            $scope.task = taskFactory();
 
             form.add = function() {
+                if (! $scope.newTask) {
+                    return false;
+                }
+
                 // Проверим, всё ли заполнено.
-                // Если да, то отправим задачу в список
-                // и создадим новую.
+                if ($scope.newTask.$valid) {
+                    // Если да, то отправим задачу в список
+                    // и создадим новую.
+                    tasksService.push($scope.task);
+                    $scope.task = taskFactory();
+                    $scope.newTask.$setPristine();
+                    $log.debug(tasksService);
+                }
                 // Если нет, то сообщим об этом пользователю.
+                else {
+                    $log.debug('not valid');
+                }
             }
         }
     }
