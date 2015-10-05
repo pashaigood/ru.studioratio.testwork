@@ -1,4 +1,5 @@
 # Тестовое задание для ru.studioratio
+## [Рабочая версия](http://pashaigood.github.io/ru.studioratio.testwork/)
 ### С чего я начал
 * Создал псевдо диаграмму
 
