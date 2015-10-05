@@ -1,6 +1,6 @@
 {
   "name": "ruStudiorationTestwork",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
     "angular-bootstrap": "~0.13.4",
