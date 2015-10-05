@@ -8,7 +8,12 @@
                     <div class="row">
                         <div class="col-xs-9" ng-bind="task.title"></div>
                         <div time-format="task.date.getTime()-timestamp" class="col-xs-3 text-nowrap text-right">
-                            {{hhours}}:{{mminutes}}:{{sseconds}}
+                            <span ng-show="days > 0">
+                            дни: {{days}}
+                            </span>
+                            <span ng-show="days == 0">
+                                {{hhours}}:{{mminutes}}:{{sseconds}}
+                            </span>
                         </div>
                     </div>
                 </h3>

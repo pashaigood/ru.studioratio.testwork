@@ -33,6 +33,7 @@
                     // Если да, то отправим задачу в список
                     // и создадим новую.
                     tasksService.push($scope.task);
+                    $scope.task.check();
                     $scope.task = taskFactory();
                     $scope.newTask.$setPristine();
                 }
