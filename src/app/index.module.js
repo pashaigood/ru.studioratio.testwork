@@ -3,8 +3,6 @@
 
     angular
         .module('testwork', [
-            'ngTouch',
-            'ngSanitize',
             'ui.bootstrap',
             'ngStorage'
         ]);

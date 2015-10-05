@@ -2,11 +2,8 @@
   "name": "ruStudiorationTestwork",
   "version": "0.1.0",
   "dependencies": {
-    "angular-touch": "~1.4.2",
-    "angular-sanitize": "~1.4.2",
     "bootstrap-sass": "~3.3.5",
     "angular-bootstrap": "~0.13.4",
-    "animate.css": "~3.4.0",
     "angular": "~1.4.2",
     "ngstorage": "~0.3.9"
   },

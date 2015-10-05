@@ -1,8 +1,6 @@
 (function() {
     'use strict';
 
-    //TODO: Загружаем данные из локального хранилища.
-
     angular
         .module('testwork')
         .service('tasksService', function($localStorage, taskFactory) {
