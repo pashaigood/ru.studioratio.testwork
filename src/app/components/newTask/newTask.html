@@ -20,6 +20,12 @@
     </div>
     <div class="form-group" ng-class="{'has-error':(isDateValid = (newTask.date.$dirty && newTask.date.$invalid))}">
         <label>Дата и время окончания</label>
+        <!--
+        Пожалуй, самый спорный момент в данном приложении.
+        Разделения выбора даты и времени на 2 поля.
+        Если сделать реально 2 поля, то будет необходимо усложнять логику
+        для последующего сведения в одно.
+        -->
         <div class="row">
             <div class="col-xs-6">
                 <input type="date"

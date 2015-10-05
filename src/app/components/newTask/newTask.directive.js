@@ -27,6 +27,7 @@
                     return false;
                 }
 
+                //TODO: Сделать проверку на то, что-бы дата была больше текущей.
                 // Проверим, всё ли заполнено.
                 if ($scope.newTask.$valid) {
                     // Если да, то отправим задачу в список
@@ -34,7 +35,6 @@
                     tasksService.push($scope.task);
                     $scope.task = taskFactory();
                     $scope.newTask.$setPristine();
-                    $log.debug(tasksService);
                 }
                 // Если нет, то сообщим об этом пользователю.
                 else {

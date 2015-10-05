@@ -5,7 +5,8 @@
         .module('testwork', [
             'ngTouch',
             'ngSanitize',
-            'ui.bootstrap'
+            'ui.bootstrap',
+            'ngStorage'
         ]);
 
 })();
